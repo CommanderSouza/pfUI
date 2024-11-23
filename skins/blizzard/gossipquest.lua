@@ -48,7 +48,7 @@ pfUI:RegisterSkin("Gossip and Quest", "vanilla:tbc", function ()
 
         item:SetWidth(xsize)
         StripTextures(item)
-        CreateBackdrop(item, nil, nil, .75)
+        CreateBackdrop(item, nil, nil, .85)
         SetAllPointsOffset(item.backdrop, item, 4)
         SetHighlight(item)
 
@@ -73,7 +73,7 @@ pfUI:RegisterSkin("Gossip and Quest", "vanilla:tbc", function ()
     local frameName = f
     local frame = _G[frameName.."Frame"]
     local NPCName = _G[frame:GetName().."NpcNameText"]
-    CreateBackdrop(frame, nil, nil, .75)
+    CreateBackdrop(frame, nil, nil, .85)
     CreateBackdropShadow(frame)
 
     frame.backdrop:SetPoint("TOPLEFT", 12, -18)
@@ -98,7 +98,7 @@ pfUI:RegisterSkin("Gossip and Quest", "vanilla:tbc", function ()
       local scroll = _G[frameName..panel.."ScrollFrame"]
       scroll:SetHeight(330)
       SkinScrollbar(_G[scroll:GetName().."ScrollBar"])
-      CreateBackdrop(scroll, nil, true, .75)
+      CreateBackdrop(scroll, nil, true, .85)
 
       local bg = scroll:CreateTexture(nil, "LOW")
       bg:SetAllPoints()

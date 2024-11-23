@@ -9,7 +9,7 @@ pfUI:RegisterSkin("Readycheck", "vanilla:tbc", function ()
     end
   
     StripTextures(ReadyCheckFrame, true)
-    CreateBackdrop(ReadyCheckFrame, nil, nil, .75)
+    CreateBackdrop(ReadyCheckFrame, nil, nil, .85)
     CreateBackdropShadow(ReadyCheckFrame)
 
     SkinButton(ReadyCheckFrameYesButton)

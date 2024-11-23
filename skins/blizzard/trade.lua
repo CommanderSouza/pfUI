@@ -3,7 +3,7 @@ pfUI:RegisterSkin("Trade", "vanilla:tbc", function ()
   local bpad = rawborder > 1 and border - GetPerfectPixel() or GetPerfectPixel()
 
   StripTextures(TradeFrame)
-  CreateBackdrop(TradeFrame, nil, nil, .75)
+  CreateBackdrop(TradeFrame, nil, nil, .85)
   CreateBackdropShadow(TradeFrame)
 
   TradeFrame.backdrop:SetPoint("TOPLEFT", 8, -20)

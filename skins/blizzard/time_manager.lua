@@ -5,7 +5,7 @@ pfUI:RegisterSkin("Time Manager", "tbc", function ()
   HookAddonOrVariable("Blizzard_TimeManager", function()
     do -- TimeManagerFrame
       StripTextures(TimeManagerFrame)
-      CreateBackdrop(TimeManagerFrame, nil, nil, .75)
+      CreateBackdrop(TimeManagerFrame, nil, nil, .85)
       CreateBackdropShadow(TimeManagerFrame)
       TimeManagerClockButton:Hide()
       TimeManagerClockButton.Show = function() return end

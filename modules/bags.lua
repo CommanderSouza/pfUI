@@ -247,12 +247,13 @@ pfUI:RegisterModule("bags", "vanilla:tbc", function ()
     elseif pfUI.chat then
       -- use chat frame as anchor if existing
       if C.appearance.bags.abovechat == "0" then
-        frame:SetPoint(anchor[1], anchor[2], anchor[1], 0, 0)
         frame:SetPoint(anchor[3], anchor[2], anchor[3], 0, 0)
-      else
-        frame:SetPoint(anchor[3], anchor[2], anchor[5], 0, 3*default_border)
-        frame:SetPoint(anchor[1], anchor[2], anchor[4], 0, 3*default_border)
-      end
+          frame:SetPoint(anchor[1], anchor[2], anchor[1], 0, 0)
+          frame:SetPoint(anchor[3], anchor[2], anchor[3], 0, 0)
+        else
+          frame:SetPoint(anchor[3], anchor[2], anchor[5], 0, 3*default_border)
+          frame:SetPoint(anchor[1], anchor[2], anchor[4], 0, 3*default_border)
+        end
     else
       -- align frame to UIParent if no anchor is available
       frame:SetPoint(anchor[1], UIParent, anchor[1], 5, 5)
@@ -469,7 +470,7 @@ pfUI:RegisterModule("bags", "vanilla:tbc", function ()
         pfUI.bags[bag].slots[slot].frame.backdrop:SetBackdropBorderColor(1, .8, .2, .8)
         pfUI.bags[bag].slots[slot].frame.qtext:SetText("?")
       else
-        pfUI.bags[bag].slots[slot].frame.backdrop:SetBackdropBorderColor(.5,.5,.5,1)
+        pfUI.bags[bag].slots[slot].frame.backdrop:SetBackdropBorderColor(.5,.5,.5,0)
       end
     else
       local bagtype = GetBagFamily(bag)
@@ -483,7 +484,7 @@ pfUI:RegisterModule("bags", "vanilla:tbc", function ()
       elseif bagtype == "KEYRING" then
         pfUI.bags[bag].slots[slot].frame.backdrop:SetBackdropBorderColor(.5,1,1,.5)
       else
-        pfUI.bags[bag].slots[slot].frame.backdrop:SetBackdropBorderColor(1,1,1,.2)
+        pfUI.bags[bag].slots[slot].frame.backdrop:SetBackdropBorderColor(0,0,0,0)
       end
     end
 
@@ -574,7 +575,7 @@ pfUI:RegisterModule("bags", "vanilla:tbc", function ()
         frame.bagslots.slots[slot].frame:SetScript("OnEnter", function()
           for slot, f in ipairs(pfUI.bags[this.slot + 1].slots) do
             CreateBackdrop(f.frame, default_border)
-            f.frame.backdrop:SetBackdropBorderColor(.2,1,.8,1)
+            f.frame.backdrop:SetBackdropBorderColor(.7,.2,1,1)
           end
           SlotEnter(this)
         end)

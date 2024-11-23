@@ -707,6 +707,10 @@ pfUI:RegisterModule("nameplates", "vanilla:tbc", function ()
     if superwow_active and unitstr and UnitIsTapped(unitstr) and not UnitIsTappedByPlayer(unitstr) then
       r, g, b, a = .5, .5, .5, .8
     end
+    
+    if superwow_active and unitstr and UnitIsTapped(unitstr) and not UnitIsTappedByPlayer(unitstr) then
+      r, g, b, a = .5, .5, .5, .8
+    end
 
     if r ~= plate.cache.r or g ~= plate.cache.g or b ~= plate.cache.b then
       plate.health:SetStatusBarColor(r, g, b, a)

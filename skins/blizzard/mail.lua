@@ -125,7 +125,7 @@ pfUI:RegisterSkin("Mailbox", "vanilla:tbc", function ()
   end
 
   StripTextures(MailFrame, true)
-  CreateBackdrop(MailFrame, nil, nil, .75)
+  CreateBackdrop(MailFrame, nil, nil, .85)
   CreateBackdropShadow(MailFrame)
 
   MailFrame.backdrop:SetPoint("TOPLEFT", 12, -12)
@@ -146,7 +146,7 @@ pfUI:RegisterSkin("Mailbox", "vanilla:tbc", function ()
     InboxTitleText:ClearAllPoints()
     InboxTitleText:SetPoint("TOP", MailFrame.backdrop, "TOP", 0, -10)
 
-    CreateBackdrop(InboxFrame, nil, nil, .75)
+    CreateBackdrop(InboxFrame, nil, nil, .85)
     InboxFrame.backdrop:SetPoint("TOPLEFT", _G["MailItem"..1], "TOPLEFT", 0, 1)
     InboxFrame.backdrop:SetPoint("BOTTOMRIGHT", _G["MailItem"..INBOXITEMS_TO_DISPLAY], "BOTTOMRIGHT", 0, 0)
     _G["MailItem"..1]:SetPoint("TOPLEFT", 28, -70)
@@ -198,7 +198,7 @@ pfUI:RegisterSkin("Mailbox", "vanilla:tbc", function ()
 
   do -- OpenMailFrame
     StripTextures(OpenMailFrame)
-    CreateBackdrop(OpenMailFrame, nil, nil, .75)
+    CreateBackdrop(OpenMailFrame, nil, nil, .85)
     OpenMailFrame.backdrop:SetPoint("TOPLEFT", 10, -10)
     OpenMailFrame.backdrop:SetPoint("BOTTOMRIGHT", -32, 72)
     OpenMailFrame:SetHitRectInsets(10,32,10,72)

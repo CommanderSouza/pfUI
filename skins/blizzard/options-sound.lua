@@ -10,9 +10,9 @@ pfUI:RegisterSkin("Options - Sound", "vanilla:tbc", function ()
     NUM_SLIDERS = 6
 
     StripTextures(AudioOptionsFrame)
-    CreateBackdrop(SoundOptionsFramePlayback, nil, true, .75)
-    CreateBackdrop(SoundOptionsFrameHardware, nil, true, .75)
-    CreateBackdrop(SoundOptionsFrameVolume, nil, true, .75)
+    CreateBackdrop(SoundOptionsFramePlayback, nil, true, .85)
+    CreateBackdrop(SoundOptionsFrameHardware, nil, true, .85)
+    CreateBackdrop(SoundOptionsFrameVolume, nil, true, .85)
 
     SkinDropDown(SoundOptionsOutputDropDown)
 
@@ -38,7 +38,7 @@ pfUI:RegisterSkin("Options - Sound", "vanilla:tbc", function ()
   end
 
   StripTextures(SoundOptionsFrame)
-  CreateBackdrop(SoundOptionsFrame, nil, true, .75)
+  CreateBackdrop(SoundOptionsFrame, nil, true, .85)
   CreateBackdropShadow(SoundOptionsFrame)
 
   EnableMovable(SoundOptionsFrame)

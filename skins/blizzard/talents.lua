@@ -14,7 +14,7 @@ pfUI:RegisterSkin("Talents", "vanilla:tbc", function ()
 
 
     StripTextures(TALENT_FRAME)
-    CreateBackdrop(TALENT_FRAME, nil, nil, .75)
+    CreateBackdrop(TALENT_FRAME, nil, nil, .85)
     CreateBackdropShadow(TALENT_FRAME)
 
     TALENT_FRAME.backdrop:SetPoint("TOPLEFT", 10, -10)

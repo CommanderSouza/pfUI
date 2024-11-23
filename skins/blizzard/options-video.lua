@@ -42,7 +42,7 @@ pfUI:RegisterSkin("Options - Video", "vanilla:tbc", function ()
     end
   end
 
-  CreateBackdrop(OptionsFrame, nil, nil, .75)
+  CreateBackdrop(OptionsFrame, nil, nil, .85)
   CreateBackdropShadow(OptionsFrame)
 
   EnableMovable(OptionsFrame)
@@ -57,11 +57,11 @@ pfUI:RegisterSkin("Options - Video", "vanilla:tbc", function ()
   OptionsFrameHeaderText:ClearAllPoints()
   OptionsFrameHeaderText:SetPoint("TOP", OptionsFrame.backdrop, "TOP", 0, -10)
 
-  CreateBackdrop(OptionsFrameDisplay, nil, true, .75)
-  CreateBackdrop(OptionsFrameWorldAppearance, nil, true, .75)
-  CreateBackdrop(OptionsFrameBrightness, nil, true, .75)
-  CreateBackdrop(OptionsFramePixelShaders, nil, true, .75)
-  CreateBackdrop(OptionsFrameMiscellaneous, nil, true, .75)
+  CreateBackdrop(OptionsFrameDisplay, nil, true, .85)
+  CreateBackdrop(OptionsFrameWorldAppearance, nil, true, .85)
+  CreateBackdrop(OptionsFrameBrightness, nil, true, .85)
+  CreateBackdrop(OptionsFramePixelShaders, nil, true, .85)
+  CreateBackdrop(OptionsFrameMiscellaneous, nil, true, .85)
 
   SkinButton(OptionsFrameDefaults)
   SkinButton(OptionsFrameCancel)

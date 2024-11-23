@@ -29,7 +29,7 @@ pfUI:RegisterModule("addons", "vanilla:tbc", function ()
   pfUI.addons:SetScript("OnDragStop", function() this:StopMovingOrSizing() end)
   pfUI.addons:Hide()
 
-  CreateBackdrop(pfUI.addons, nil, true, .75)
+  CreateBackdrop(pfUI.addons, nil, true, .85)
   CreateBackdropShadow(pfUI.addons)
 
   pfUI.addons:SetScript("OnHide", function()
@@ -148,7 +148,7 @@ pfUI:RegisterModule("addons", "vanilla:tbc", function ()
   pfUI.addons.profile.del:SetScript("OnClick", function() -- TODO
     local id, name = pfUI.addons.profile.dropdown:GetSelection()
     if not name then return end
-    CreateQuestionDialog(T["Delete profile"] .. " '|cff33ffcc" .. name .. "|r'?", function()
+    CreateQuestionDialog(T["Delete profile"] .. " '|cffbb33ff" .. name .. "|r'?", function()
       pfUI_addon_profiles[name] = nil
       SetAddonProfile(T["Current"])
     end)
@@ -223,11 +223,11 @@ pfUI:RegisterModule("addons", "vanilla:tbc", function ()
     GameTooltip:SetOwner(this, "ANCHOR_RIGHT")
     GameTooltip:SetText(this.atitle)
     if this.aversion then
-      GameTooltip:AddDoubleLine(T["Version"], this.aversion, 1,1,1, .2,1,.8)
+      GameTooltip:AddDoubleLine(T["Version"], this.aversion, 1,1,1, .7,.2,1)
     end
 
     if this.aauthor then
-      GameTooltip:AddDoubleLine(T["Author"], this.aauthor, 1,1,1, .2,1,.8)
+      GameTooltip:AddDoubleLine(T["Author"], this.aauthor, 1,1,1, .7,.2,1)
     end
 
     GameTooltip:AddLine(this.anote, .75,.75,.75,1)

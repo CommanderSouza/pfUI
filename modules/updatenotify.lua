@@ -32,8 +32,8 @@ pfUI:RegisterModule("updatenotify", "vanilla:tbc", function ()
 
     if event == "PLAYER_ENTERING_WORLD" then
       if not alreadyshown and localversion < remoteversion then
-        DEFAULT_CHAT_FRAME:AddMessage(T["|cff33ffccpf|rUI: New version available! Have a look at http://shagu.org !"])
-        DEFAULT_CHAT_FRAME:AddMessage(T["|cffddddddIt's always safe to upgrade |cff33ffccpf|rUI. |cffddddddYou won't lose any of your configuration."])
+        DEFAULT_CHAT_FRAME:AddMessage(T["|cffbb33ffpf|rUI: New version available! Have a look at http://shagu.org !"])
+        DEFAULT_CHAT_FRAME:AddMessage(T["|cffddddddIt's always safe to upgrade |cffbb33ffpf|rUI. |cffddddddYou won't lose any of your configuration."])
         pfUI_init.updateavailable = localversion
         alreadyshown = true
       end

@@ -4,7 +4,7 @@ pfUI:RegisterSkin("Macro", "vanilla:tbc", function ()
 
   HookAddonOrVariable("Blizzard_MacroUI", function()
     StripTextures(MacroFrame)
-    CreateBackdrop(MacroFrame, nil, nil, .75)
+    CreateBackdrop(MacroFrame, nil, nil, .85)
     CreateBackdropShadow(MacroFrame)
 
     MacroFrame.backdrop:SetPoint("TOPLEFT", 10, -10)
@@ -60,7 +60,7 @@ pfUI:RegisterSkin("Macro", "vanilla:tbc", function ()
 
 
     StripTextures(MacroPopupFrame)
-    CreateBackdrop(MacroPopupFrame, nil, nil, .75)
+    CreateBackdrop(MacroPopupFrame, nil, nil, .85)
     MacroPopupFrame:SetFrameStrata("DIALOG")
     MacroPopupFrame:ClearAllPoints()
     MacroPopupFrame:SetPoint("TOPLEFT", MacroFrame.backdrop, "TOPRIGHT", 2*border, 0)

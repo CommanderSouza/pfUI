@@ -4,7 +4,7 @@ pfUI:RegisterSkin("KeyBindings", "vanilla:tbc", function ()
 
   HookAddonOrVariable("Blizzard_BindingUI", function()
     StripTextures(KeyBindingFrame)
-    CreateBackdrop(KeyBindingFrame, nil, nil, .75)
+    CreateBackdrop(KeyBindingFrame, nil, nil, .85)
     CreateBackdropShadow(KeyBindingFrame)
 
     KeyBindingFrame.backdrop:SetPoint("TOPLEFT", 2, 10)

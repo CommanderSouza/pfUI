@@ -401,12 +401,12 @@ function pfUI.api.CreateTabChild(self, title, bwidth, bheight, bottom, static)
     end
   end
 
-  SkinButton(b,.2,1,.8)
+  SkinButton(b,.7,.2,1)
 
   if childcount ~= 1 then
     b:SetTextColor(.5,.5,.5)
   else
-    b:SetTextColor(.2,1,.8)
+    b:SetTextColor(.7,.2,1)
   end
 
   b:SetScript("OnClick", function()
@@ -419,7 +419,7 @@ function pfUI.api.CreateTabChild(self, title, bwidth, bheight, bottom, static)
       v.active = false
       v:SetTextColor(.5,.5,.5)
     end
-    self.buttons[this:GetID()]:SetTextColor(.2,1,.8)
+    self.buttons[this:GetID()]:SetTextColor(.7,.2,1)
   end)
 
   self.buttons[childcount] = b
@@ -485,7 +485,7 @@ function pfUI.api.CreateScrollFrame(name, parent)
   f.slider:SetThumbTexture(pfUI.media["img:col"])
   f.slider.thumb = f.slider:GetThumbTexture()
   f.slider.thumb:SetHeight(50)
-  f.slider.thumb:SetTexture(.3,1,.8,.5)
+  f.slider.thumb:SetTexture(.7,.2,1,.5)
 
   f.slider:SetScript("OnValueChanged", function()
     f:SetVerticalScroll(this:GetValue())
@@ -1096,7 +1096,7 @@ function pfUI.api.CreateQuestionDialog(text, yes, no, editbox, onclose)
   if editbox then
     question.input = CreateFrame("EditBox", "pfQuestionDialogEdit", question)
     pfUI.api.CreateBackdrop(question.input)
-    question.input:SetTextColor(.2,1,.8,1)
+    question.input:SetTextColor(.7,.2,1,1)
     question.input:SetJustifyH("CENTER")
     question.input:SetAutoFocus(false)
     question.input:SetPoint("TOPLEFT", question.text, "BOTTOMLEFT", border, -padding)

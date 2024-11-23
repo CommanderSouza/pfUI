@@ -3,7 +3,7 @@ pfUI:RegisterSkin("Battlefield", "vanilla:tbc", function ()
   local bpad = rawborder > 1 and border - GetPerfectPixel() or GetPerfectPixel()
 
   StripTextures(BattlefieldFrame)
-  CreateBackdrop(BattlefieldFrame, nil, nil, .75)
+  CreateBackdrop(BattlefieldFrame, nil, nil, .85)
   CreateBackdropShadow(BattlefieldFrame)
 
   BattlefieldFrame.backdrop:SetPoint("TOPLEFT", 10, -10)

@@ -1,7 +1,7 @@
 pfUI:RegisterSkin("GM Survey", "vanilla", function ()
   HookAddonOrVariable("Blizzard_GMSurveyUI", function()
     StripTextures(GMSurveyFrame)
-    CreateBackdrop(GMSurveyFrame, nil, nil, .75)
+    CreateBackdrop(GMSurveyFrame, nil, nil, .85)
     CreateBackdropShadow(GMSurveyFrame)
 
     GMSurveyFrame.backdrop:SetPoint("TOPLEFT", 10, 0)
@@ -29,7 +29,7 @@ pfUI:RegisterSkin("GM Survey", "vanilla", function ()
     GMSurveyCancelButton:ClearAllPoints()
     GMSurveyCancelButton:SetPoint("BOTTOMLEFT", GMSurveyFrame.backdrop, "BOTTOMLEFT", 10, 10)
 
-    CreateBackdrop(GMSurveyCommentFrame, nil, true, .75)
+    CreateBackdrop(GMSurveyCommentFrame, nil, true, .85)
     SkinScrollbar(GMSurveyCommentScrollFrameScrollBar)
     GMSurveyFrameComment:SetMaxLetters(2000)
     hooksecurefunc("GMSurveyFrame_Update", function()

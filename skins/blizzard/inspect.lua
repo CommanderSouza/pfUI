@@ -25,7 +25,7 @@ pfUI:RegisterSkin("Inspect", "tbc", function ()
   local bpad = rawborder > 1 and border - GetPerfectPixel() or GetPerfectPixel()
 
   HookAddonOrVariable("Blizzard_InspectUI", function()
-    CreateBackdrop(InspectFrame, nil, nil, .75)
+    CreateBackdrop(InspectFrame, nil, nil, .85)
     CreateBackdropShadow(InspectFrame)
 
     InspectFrame.backdrop:SetPoint("TOPLEFT", 10, -10)
@@ -132,7 +132,7 @@ pfUI:RegisterSkin("Inspect", "vanilla", function ()
   HookAddonOrVariable("Blizzard_InspectUI", function()
     local cache = {}
 
-    CreateBackdrop(InspectFrame, nil, nil, .75)
+    CreateBackdrop(InspectFrame, nil, nil, .85)
     CreateBackdropShadow(InspectFrame)
 
     InspectFrame.backdrop:SetPoint("TOPLEFT", 10, -10)

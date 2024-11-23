@@ -103,16 +103,16 @@ pfUI:RegisterModule("afkcam", "vanilla:tbc", function ()
           h = h - 12
           noon = "PM"
         end
-        time = string.format("%.2d|cff33ffcc:|r%.2d %s", h, m, noon)
+        time = string.format("%.2d|cffbb33ff:|r%.2d %s", h, m, noon)
       else
-        time = date("%I|cff33ffcc:|r%M %p")
+        time = date("%I|cffbb33ff:|r%M %p")
       end
       clock.time:SetText(time)
     else
       if C.global.servertime == "1" then
-        time = string.format("%.2d|cff33ffcc:|r%.2d", h, m)
+        time = string.format("%.2d|cffbb33ff:|r%.2d", h, m)
       else
-        time = date("%H|cff33ffcc:|r%M")
+        time = date("%H|cffbb33ff:|r%M")
       end
     end
     clock.time:SetText(time)

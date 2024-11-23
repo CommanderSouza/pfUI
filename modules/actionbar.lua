@@ -470,7 +470,7 @@ pfUI:RegisterModule("actionbar", "vanilla:tbc", function ()
       GameTooltip:SetAction(self.id)
     end
 
-    self.highlight:Show()
+    -- self.highlight:Show()
   end
 
   local function ButtonLeave(self)
@@ -1081,7 +1081,7 @@ pfUI:RegisterModule("actionbar", "vanilla:tbc", function ()
         f.autocastable = f:CreateTexture(nil, "BORDER")
         f.autocastable:SetAllPoints()
         f.autocastable:SetTexture("Interface\\Buttons\\UI-AutoCastableOverlay")
-        f.autocastable:SetTexCoord(.25, .75, .25, .75)
+        f.autocastable:SetTexCoord(.25, .75, .25, .85)
       end
 
       -- macro

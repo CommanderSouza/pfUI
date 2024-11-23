@@ -4,7 +4,7 @@ pfUI:RegisterSkin("Item Socketing", "tbc", function ()
 
   HookAddonOrVariable("Blizzard_ItemSocketingUI", function()
     StripTextures(ItemSocketingFrame)
-    CreateBackdrop(ItemSocketingFrame, nil, nil, .75)
+    CreateBackdrop(ItemSocketingFrame, nil, nil, .85)
     CreateBackdropShadow(ItemSocketingFrame)
     ItemSocketingFrame.backdrop:SetPoint("TOPLEFT", 8, -14)
     ItemSocketingFrame.backdrop:SetPoint("BOTTOMRIGHT", -4, 28)

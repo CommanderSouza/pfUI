@@ -3,7 +3,7 @@ pfUI:RegisterSkin("Looking for group", "tbc", function ()
   local bpad = rawborder > 1 and border - GetPerfectPixel() or GetPerfectPixel()
 
   StripTextures(LFGParentFrame)
-  CreateBackdrop(LFGParentFrame, nil, nil, .75)
+  CreateBackdrop(LFGParentFrame, nil, nil, .85)
   CreateBackdropShadow(LFGParentFrame)
 
   LFGParentFrame.backdrop:SetPoint("TOPLEFT", 14, -10)

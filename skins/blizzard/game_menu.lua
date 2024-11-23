@@ -1,6 +1,6 @@
 pfUI:RegisterSkin("Game Menu", "vanilla:tbc", function ()
   StripTextures(GameMenuFrame)
-  CreateBackdrop(GameMenuFrame, nil, true, .75)
+  CreateBackdrop(GameMenuFrame, nil, true, .85)
   CreateBackdropShadow(GameMenuFrame)
 
   GameMenuFrame:SetWidth(GameMenuFrame:GetWidth() - 30)
@@ -18,7 +18,7 @@ pfUI:RegisterSkin("Game Menu", "vanilla:tbc", function ()
 
   local pfUIButton = CreateFrame("Button", "GameMenuButtonPFUI", GameMenuFrame, "GameMenuButtonTemplate")
   pfUIButton:SetPoint("TOP", 0, -10)
-  pfUIButton:SetText(T["|cff33ffccpf|cffffffffUI|cffcccccc Config"])
+  pfUIButton:SetText(T["|cffbb33ffpf|cffffffffUI|cffcccccc Config"])
   pfUIButton:SetScript("OnClick", function()
     pfUI.gui:Show()
     HideUIPanel(GameMenuFrame)

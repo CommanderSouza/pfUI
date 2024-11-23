@@ -81,7 +81,7 @@ pfUI:RegisterModule("addoncompat", function ()
 
       -- ask for reload
       CreateQuestionDialog(
-        string.format(T["The addon \"|cff33ffcc%s|r\" doesn't work with pfUI and has been disabled."], name) .. "\n"
+        string.format(T["The addon \"|cffbb33ff%s|r\" doesn't work with pfUI and has been disabled."], name) .. "\n"
         .. T["Do you want to reload the UI now?"],
         {T["Yes"], function()
           ReloadUI()
@@ -97,7 +97,7 @@ pfUI:RegisterModule("addoncompat", function ()
     local name, id = next(queue_soft)
     if name and id then
       CreateQuestionDialog(
-        string.format(T["Every feature that \"|cff33ffcc%s|r\" offers is already built into pfUI."], name) .. "\n"
+        string.format(T["Every feature that \"|cffbb33ff%s|r\" offers is already built into pfUI."], name) .. "\n"
         .. T["Do you want to disable the addon?"],
         {T["Yes"], function()
           queue_soft[name] = nil

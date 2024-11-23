@@ -1,6 +1,6 @@
 pfUI:RegisterSkin("Flightmaster", "vanilla:tbc", function ()
   StripTextures(TaxiFrame)
-  CreateBackdrop(TaxiFrame, nil, nil, .75)
+  CreateBackdrop(TaxiFrame, nil, nil, .85)
   CreateBackdropShadow(TaxiFrame)
 
   TaxiFrame.backdrop:SetPoint("TOPLEFT", 10, -10)

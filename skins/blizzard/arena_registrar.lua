@@ -5,7 +5,7 @@ pfUI:RegisterSkin("Arena Registrar", "tbc", function ()
   do -- ArenaRegistrarFrame
     StripTextures(ArenaRegistrarFrame)
     StripTextures(ArenaRegistrarGreetingFrame)
-    CreateBackdrop(ArenaRegistrarFrame, nil, nil, .75)
+    CreateBackdrop(ArenaRegistrarFrame, nil, nil, .85)
     CreateBackdropShadow(ArenaRegistrarFrame)
 
     ArenaRegistrarFrame.backdrop:SetPoint("TOPLEFT", 14, -18)
@@ -38,7 +38,7 @@ pfUI:RegisterSkin("Arena Registrar", "tbc", function ()
 
   do -- PVPBannerFrame
     StripTextures(PVPBannerFrame)
-    CreateBackdrop(PVPBannerFrame, nil, nil, .75)
+    CreateBackdrop(PVPBannerFrame, nil, nil, .85)
     CreateBackdropShadow(PVPBannerFrame)
 
     PVPBannerFrame.backdrop:SetPoint("TOPLEFT", 10, -12)

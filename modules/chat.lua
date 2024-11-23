@@ -80,7 +80,7 @@ pfUI:RegisterModule("chat", "vanilla:tbc", function ()
   UpdateMovable(pfUI.chat.left)
   CreateBackdrop(pfUI.chat.left, default_border, nil, .8)
   if C.chat.global.frameshadow == "1" then
-    CreateBackdropShadow(pfUI.chat.left)
+    -- CreateBackdropShadow(pfUI.chat.left)
   end
 
   if C.chat.global.custombg == "1" then
@@ -202,7 +202,7 @@ pfUI:RegisterModule("chat", "vanilla:tbc", function ()
   end)
 
   pfUI.chat.urlcopy.text = CreateFrame("EditBox", "pfURLCopyEditBox", pfUI.chat.urlcopy)
-  pfUI.chat.urlcopy.text:SetTextColor(.2,1,.8,1)
+  pfUI.chat.urlcopy.text:SetTextColor(.7,.2,1,1)
   pfUI.chat.urlcopy.text:SetJustifyH("CENTER")
 
   pfUI.chat.urlcopy.text:SetWidth(250)
@@ -255,7 +255,7 @@ pfUI:RegisterModule("chat", "vanilla:tbc", function ()
   UpdateMovable(pfUI.chat.right)
   CreateBackdrop(pfUI.chat.right, default_border, nil, .8)
   if C.chat.global.frameshadow == "1" then
-    CreateBackdropShadow(pfUI.chat.right)
+    -- CreateBackdropShadow(pfUI.chat.right)
   end
 
   if C.chat.global.custombg == "1" then

@@ -4,7 +4,7 @@ pfUI:RegisterSkin("Friends", "vanilla:tbc", function ()
   local maxtab = pfUI.expansion == "vanilla" and 4 or 5
 
   StripTextures(FriendsFrame, true)
-  CreateBackdrop(FriendsFrame, nil, nil, .75)
+  CreateBackdrop(FriendsFrame, nil, nil, .85)
   CreateBackdropShadow(FriendsFrame)
 
   FriendsFrame.backdrop:SetPoint("TOPLEFT", 8, -10)
@@ -285,7 +285,7 @@ pfUI:RegisterSkin("Friends", "vanilla:tbc", function ()
 
     -- side dock dialog
     StripTextures(GuildMemberDetailFrame)
-    CreateBackdrop(GuildMemberDetailFrame, nil, true, .75)
+    CreateBackdrop(GuildMemberDetailFrame, nil, true, .85)
     GuildMemberDetailFrame:ClearAllPoints()
     GuildMemberDetailFrame:SetPoint("TOPLEFT", FriendsFrame.backdrop, "TOPRIGHT", border*2, 0)
 
@@ -321,7 +321,7 @@ pfUI:RegisterSkin("Friends", "vanilla:tbc", function ()
 
     -- guild info dock
     StripTextures(GuildInfoFrame)
-    CreateBackdrop(GuildInfoFrame, nil, true, .75)
+    CreateBackdrop(GuildInfoFrame, nil, true, .85)
 
     SkinCloseButton(GuildInfoCloseButton, GuildInfoFrame, -6, -6)
 
@@ -344,9 +344,9 @@ pfUI:RegisterSkin("Friends", "vanilla:tbc", function ()
 
     if GuildEventLogFrame then -- guild log frame (tbc+)
       StripTextures(GuildEventFrame)
-      CreateBackdrop(GuildEventFrame, nil, true, .75)
+      CreateBackdrop(GuildEventFrame, nil, true, .85)
       StripTextures(GuildEventLogFrame)
-      CreateBackdrop(GuildEventLogFrame, nil, true, .75)
+      CreateBackdrop(GuildEventLogFrame, nil, true, .85)
       StripTextures(GuildEventLogScrollFrame)
       SkinScrollbar(GuildEventLogScrollFrameScrollBar)
       SkinCloseButton(GuildEventLogCloseButton)
@@ -356,7 +356,7 @@ pfUI:RegisterSkin("Friends", "vanilla:tbc", function ()
 
     -- guild control
     StripTextures(GuildControlPopupFrame)
-    CreateBackdrop(GuildControlPopupFrame, nil, true, .75)
+    CreateBackdrop(GuildControlPopupFrame, nil, true, .85)
     GuildControlPopupFrame:ClearAllPoints()
     GuildControlPopupFrame:SetPoint("TOPLEFT", FriendsFrame.backdrop, "TOPRIGHT", border*2, 0)
 
@@ -434,7 +434,7 @@ pfUI:RegisterSkin("Friends", "vanilla:tbc", function ()
 
   do -- Raid Tab
     StripTextures(RaidInfoFrame)
-    CreateBackdrop(RaidInfoFrame, nil, true, .75)
+    CreateBackdrop(RaidInfoFrame, nil, true, .85)
     RaidInfoFrame:ClearAllPoints()
     RaidInfoFrame:SetPoint("TOPLEFT", FriendsFrame.backdrop, "TOPRIGHT", border*2, 0)
 

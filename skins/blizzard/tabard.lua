@@ -3,7 +3,7 @@ pfUI:RegisterSkin("Guild Tabard", "vanilla:tbc", function ()
   local bpad = rawborder > 1 and border - GetPerfectPixel() or GetPerfectPixel()
 
   StripTextures(TabardFrame)
-  CreateBackdrop(TabardFrame, nil, nil, .75)
+  CreateBackdrop(TabardFrame, nil, nil, .85)
   CreateBackdropShadow(TabardFrame)
 
   TabardFrame.backdrop:SetPoint("TOPLEFT", 10, -10)

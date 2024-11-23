@@ -3,7 +3,7 @@ pfUI:RegisterSkin("Dress Up Frame", "vanilla:tbc", function ()
   local bpad = rawborder > 1 and border - GetPerfectPixel() or GetPerfectPixel()
 
   StripTextures(DressUpFrame, nil, "ARTWORK")
-  CreateBackdrop(DressUpFrame, nil, nil, .75)
+  CreateBackdrop(DressUpFrame, nil, nil, .85)
   CreateBackdropShadow(DressUpFrame)
 
   DressUpFrame.backdrop:SetPoint("TOPLEFT", 10, -10)

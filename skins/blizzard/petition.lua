@@ -3,7 +3,7 @@ pfUI:RegisterSkin("Petition", "vanilla", function ()
   local bpad = rawborder > 1 and border - GetPerfectPixel() or GetPerfectPixel()
 
   StripTextures(PetitionFrame)
-  CreateBackdrop(PetitionFrame, nil, nil, .75)
+  CreateBackdrop(PetitionFrame, nil, nil, .85)
   CreateBackdropShadow(PetitionFrame)
 
   PetitionFrame.backdrop:SetPoint("TOPLEFT", 12, -16)

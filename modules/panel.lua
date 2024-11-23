@@ -325,7 +325,7 @@ pfUI:RegisterModule("panel", "vanilla:tbc", function()
             end
             local ccolor = RAID_CLASS_COLORS[L["class"][friend_class]] or { 1, 1, 1 }
             local lcolor = GetDifficultyColor(tonumber(friend_level)) or { 1, 1, 1 }
-            local zcolor = friend_area == playerzone and "|cff33ffcc" or "|cffcccccc"
+            local zcolor = friend_area == playerzone and "|cffbb33ff" or "|cffcccccc"
             GameTooltip:AddDoubleLine(rgbhex(ccolor) .. friend_name .. rgbhex(lcolor) .. " [" .. friend_level .. "]", zcolor .. friend_area)
           end
         end
@@ -386,7 +386,7 @@ pfUI:RegisterModule("panel", "vanilla:tbc", function()
             local ccolor = RAID_CLASS_COLORS[L["class"][class]] or { 1, 1, 1 }
             local lcolor = GetDifficultyColor(tonumber(level)) or { 1, 1, 1 }
             local level = "|cff555555" .. "[" .. rgbhex(lcolor) .. level .. "|cff555555]"
-            local raid = raidparty[name] and "|cff555555[|cff33ffccG|cff555555]|r" or ""
+            local raid = raidparty[name] and "|cff555555[|cffbb33ffG|cff555555]|r" or ""
 
             if not left then
               left =  level .. raid .. " " .. rgbhex(ccolor) .. name
@@ -433,6 +433,7 @@ pfUI:RegisterModule("panel", "vanilla:tbc", function()
       widget:RegisterEvent("PLAYER_DEAD")
       widget:RegisterEvent("PLAYER_UNGHOST")
       widget:RegisterEvent("UNIT_INVENTORY_CHANGED")
+      widget:RegisterEvent("BAG_UPDATE")
       widget:RegisterEvent("UPDATE_INVENTORY_DURABILITY")
 
       widget.itemLines = {}
@@ -520,7 +521,6 @@ pfUI:RegisterModule("panel", "vanilla:tbc", function()
       local widget = CreateFrame("Frame", "pfPanelWidgetAmmo", UIParent)
       widget:RegisterEvent("PLAYER_ENTERING_WORLD")
       widget:RegisterEvent("UNIT_INVENTORY_CHANGED")
-      widget:RegisterEvent("BAG_UPDATE")
       widget.Tooltip = function()
         if GetInventoryItemQuality("player", 0) then
           local ammo = GetInventoryItemCount("player", 0)

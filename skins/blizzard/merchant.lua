@@ -18,7 +18,7 @@ pfUI:RegisterSkin("Merchant", "vanilla:tbc", function ()
   end
 
   StripTextures(MerchantFrame)
-  CreateBackdrop(MerchantFrame, nil, nil, .75)
+  CreateBackdrop(MerchantFrame, nil, nil, .85)
   CreateBackdropShadow(MerchantFrame)
 
   MerchantFrame.backdrop:SetPoint("TOPLEFT", 10, -10)

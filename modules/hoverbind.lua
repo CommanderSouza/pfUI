@@ -76,7 +76,7 @@ pfUI:RegisterModule("hoverbind", "vanilla:tbc", function ()
     pfUI.hoverbind.edit:Show()
     pfUI.hoverbind:ShowHoverbindFrames()
 
-    local txt = T["|cff33ffccKeybind Mode|r\nThis mode allows you to bind keyboard shortcuts to your actionbars.\nBy hovering a button with your cursor and pressing a key, the key will be assigned to that button.\nHit Escape on a button to remove bindings.\n\nPress Escape or click on an empty area to leave the keybind mode."]
+    local txt = T["|cffbb33ffKeybind Mode|r\nThis mode allows you to bind keyboard shortcuts to your actionbars.\nBy hovering a button with your cursor and pressing a key, the key will be assigned to that button.\nHit Escape on a button to remove bindings.\n\nPress Escape or click on an empty area to leave the keybind mode."]
     CreateInfoBox(txt, 30,  pfUI.hoverbind.edit)
   end)
 

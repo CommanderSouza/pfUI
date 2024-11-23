@@ -5,7 +5,7 @@ pfUI:RegisterSkin("Help", "vanilla:tbc", function ()
   -- not much here for tbc yet
   if pfUI.client > 11200 then
     local ticket, background = TicketStatusFrame:GetChildren()
-    CreateBackdrop(background, nil, true, .75)
+    CreateBackdrop(background, nil, true, .85)
     TicketStatusFrame:SetHeight(40)
     TicketStatusFrame:ClearAllPoints()
     TicketStatusFrame:SetPoint("TOP", 0, -5)
@@ -15,7 +15,7 @@ pfUI:RegisterSkin("Help", "vanilla:tbc", function ()
   end
 
   StripTextures(HelpFrame)
-  CreateBackdrop(HelpFrame, nil, nil, .75)
+  CreateBackdrop(HelpFrame, nil, nil, .85)
   CreateBackdropShadow(HelpFrame)
 
   HelpFrame.backdrop:SetPoint("TOPLEFT", 4, -4)
@@ -47,7 +47,7 @@ pfUI:RegisterSkin("Help", "vanilla:tbc", function ()
   -- HelpFrameOpenTicket
   StripTextures(HelpFrameOpenTicketDivider)
 
-  CreateBackdrop(HelpFrameOpenTicketScrollFrame, nil, nil, .75)
+  CreateBackdrop(HelpFrameOpenTicketScrollFrame, nil, nil, .85)
   StripTextures(HelpFrameOpenTicketScrollFrame)
   SkinScrollbar(HelpFrameOpenTicketScrollFrameScrollBar)
   HelpFrameOpenTicketText:SetMaxLetters(5000)
@@ -96,7 +96,7 @@ pfUI:RegisterSkin("Help", "vanilla:tbc", function ()
   HelpFrameHarassmentBack:SetPoint("RIGHT", HelpFrameHarassmentCancel, "LEFT", -2*bpad, 0)
 
   -- TicketStatusFrame
-  CreateBackdrop(TicketStatusFrame, nil, true, .75)
+  CreateBackdrop(TicketStatusFrame, nil, true, .85)
   TicketStatusFrame:ClearAllPoints()
   TicketStatusFrame:SetPoint("TOP", 0, -5)
   UpdateMovable(TicketStatusFrame)

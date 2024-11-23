@@ -1,6 +1,6 @@
 pfUI:RegisterSkin("Pet Stable Master", "vanilla:tbc", function ()
   StripTextures(PetStableFrame)
-  CreateBackdrop(PetStableFrame, nil, nil, .75)
+  CreateBackdrop(PetStableFrame, nil, nil, .85)
   CreateBackdropShadow(PetStableFrame)
 
   PetStableFrame.backdrop:SetPoint("TOPLEFT", 10, -10)

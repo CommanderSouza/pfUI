@@ -3,7 +3,7 @@ pfUI:RegisterSkin("Spellbook", "vanilla:tbc", function ()
   local bpad = rawborder > 1 and border - GetPerfectPixel() or GetPerfectPixel()
 
   StripTextures(SpellBookFrame)
-  CreateBackdrop(SpellBookFrame, nil, nil, .75)
+  CreateBackdrop(SpellBookFrame, nil, nil, .85)
   CreateBackdropShadow(SpellBookFrame)
 
   SpellBookFrame.backdrop:SetPoint("TOPLEFT", 12, -12)

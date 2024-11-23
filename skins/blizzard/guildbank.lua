@@ -5,7 +5,7 @@ pfUI:RegisterSkin("Guild Bank", "tbc", function ()
   HookAddonOrVariable("Blizzard_GuildBankUI", function()
     do -- GuildBankFrame
       StripTextures(GuildBankFrame)
-      CreateBackdrop(GuildBankFrame, nil, nil, .75)
+      CreateBackdrop(GuildBankFrame, nil, nil, .85)
       CreateBackdropShadow(GuildBankFrame)
       GuildBankFrame.backdrop:SetPoint("TOPLEFT", 10, -30)
       GuildBankFrame.backdrop:SetPoint("BOTTOMRIGHT", 0, 4)
@@ -94,7 +94,7 @@ pfUI:RegisterSkin("Guild Bank", "tbc", function ()
 
     do -- GuildBankPopupFrame
       StripTextures(GuildBankPopupFrame)
-      CreateBackdrop(GuildBankPopupFrame, nil, nil, .75)
+      CreateBackdrop(GuildBankPopupFrame, nil, nil, .85)
       CreateBackdropShadow(GuildBankPopupFrame)
       GuildBankPopupFrame.backdrop:SetPoint("TOPLEFT", 0, -6)
       GuildBankPopupFrame.backdrop:SetPoint("BOTTOMRIGHT", -26, 26)

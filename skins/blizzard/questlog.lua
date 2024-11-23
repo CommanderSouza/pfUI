@@ -34,7 +34,7 @@ pfUI:RegisterSkin("Quest Log", "vanilla:tbc", function ()
     QuestLogFrame:DisableDrawLayer("BACKGROUND")
 
     StripTextures(QuestLogFrame, true)
-    CreateBackdrop(QuestLogFrame, nil, nil, .75)
+    CreateBackdrop(QuestLogFrame, nil, nil, .85)
     CreateBackdropShadow(QuestLogFrame)
 
     EnableMovable(QuestLogFrame)
@@ -145,7 +145,7 @@ pfUI:RegisterSkin("Quest Log", "vanilla:tbc", function ()
 
     -- quest list backdrop
     local backdrop = CreateFrame("Frame", nil, QuestLogFrame)
-    CreateBackdrop(backdrop, nil, nil, .75)
+    CreateBackdrop(backdrop, nil, nil, .85)
     backdrop.backdrop:SetPoint("TOPLEFT", QuestLogListScrollFrame, "TOPLEFT", -5, 5)
     backdrop.backdrop:SetPoint("BOTTOMRIGHT", QuestLogListScrollFrame, "BOTTOMRIGHT", 26, -5)
 
@@ -211,7 +211,7 @@ pfUI:RegisterSkin("Quest Log", "vanilla:tbc", function ()
     bg:SetTexture("Interface\\Stationery\\StationeryTest1")
 
     -- quest log backdrop
-    CreateBackdrop(QuestLogDetailScrollFrame, nil, nil, .75)
+    CreateBackdrop(QuestLogDetailScrollFrame, nil, nil, .85)
     QuestLogDetailScrollFrame.backdrop:SetPoint("TOPLEFT", -5, 5)
     QuestLogDetailScrollFrame.backdrop:SetPoint("BOTTOMRIGHT", 26, -5)
 
@@ -228,7 +228,7 @@ pfUI:RegisterSkin("Quest Log", "vanilla:tbc", function ()
 
       item:SetWidth(xsize)
       StripTextures(item)
-      CreateBackdrop(item, nil, nil, .75)
+      CreateBackdrop(item, nil, nil, .85)
       SetAllPointsOffset(item.backdrop, item, 4)
       SetHighlight(item)
 

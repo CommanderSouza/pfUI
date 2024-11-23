@@ -1,7 +1,7 @@
 pfUI:RegisterSkin("Guild Registrar", "vanilla:tbc", function ()
   StripTextures(GuildRegistrarFrame)
   StripTextures(GuildRegistrarGreetingFrame)
-  CreateBackdrop(GuildRegistrarFrame, nil, nil, .75)
+  CreateBackdrop(GuildRegistrarFrame, nil, nil, .85)
   CreateBackdropShadow(GuildRegistrarFrame)
 
   GuildRegistrarFrame.backdrop:SetPoint("TOPLEFT", 12, -16)

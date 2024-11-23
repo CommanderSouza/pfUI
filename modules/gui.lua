@@ -244,7 +244,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
         this.objectCount = this.objectCount + 1
         frame.caption:SetJustifyH("LEFT")
         frame.caption:SetJustifyV("BOTTOM")
-        frame.caption:SetTextColor(.2,1,.8,1)
+        frame.caption:SetTextColor(.7,.2,1,1)
         frame.caption:SetAllPoints(frame)
       end
 
@@ -254,7 +254,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
         frame.input = CreateFrame("EditBox", nil, frame)
         CreateBackdrop(frame.input, nil, true)
         frame.input:SetTextInsets(5, 5, 5, 5)
-        frame.input:SetTextColor(.2,1,.8,1)
+        frame.input:SetTextColor(.7,.2,1,1)
         frame.input:SetJustifyH("RIGHT")
 
         frame.input:SetWidth(100)
@@ -273,7 +273,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
               this:GetParent().category[this:GetParent().config] = this:GetText()
               if ufunc then ufunc() else pfUI.gui.settingChanged = true end
             end
-            this:SetTextColor(.2,1,.8,1)
+            this:SetTextColor(.7,.2,1,1)
           else
             this:SetTextColor(1,.3,.3,1)
           end
@@ -490,7 +490,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
 
       f:SetScript("OnShow", function()
         this.indexed = true
-        this.button.text:SetTextColor(.2,1,.8,1)
+        this.button.text:SetTextColor(.7,.2,1,1)
         this.button.bg:SetTexture(1,1,1,1)
         this.button.bg:SetGradientAlpha("HORIZONTAL", 0,0,0,0,  1,1,1,.05)
       end)
@@ -600,7 +600,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
     pfUI.gui.title:SetPoint("TOPLEFT", pfUI.gui, "TOPLEFT", 8, -8)
     pfUI.gui.title:SetJustifyH("LEFT")
     pfUI.gui.title:SetFont(pfUI.media["font:Hooge.ttf"], 10)
-    pfUI.gui.title:SetText("|cff33ffccpf|rUI")
+    pfUI.gui.title:SetText("|cffbb33ffpf|rUI")
 
     pfUI.gui.version = pfUI.gui:CreateFontString("Status", "LOW", "GameFontNormal")
     pfUI.gui.version:SetFontObject(GameFontWhite)
@@ -689,7 +689,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
       if not this.obj[-1].highlight then
         this.obj[-1].highlight = this.obj[-1]:CreateTexture(nil, "OVERLAY")
         this.obj[-1].highlight:SetAllPoints()
-        this.obj[-1].highlight:SetTexture(.2,1,.8,.2)
+        this.obj[-1].highlight:SetTexture(.7,.2,1,.2)
       end
       this.obj[-1].highlight:Show()
     end
@@ -723,7 +723,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
     pfUI.gui.search:SetHeight(25)
     pfUI.gui.search:SetAutoFocus(false)
     pfUI.gui.search:SetTextInsets(5, 5, 5, 5)
-    pfUI.gui.search:SetTextColor(.2,1,.8,1)
+    pfUI.gui.search:SetTextColor(.7,.2,1,1)
     pfUI.gui.search:SetJustifyH("CENTER")
     pfUI.gui.search:SetFontObject(GameFontNormal)
     pfUI.gui.search:SetText(T["Search"] .. "...")
@@ -765,7 +765,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
           -- build caption string
           local caption = ""
           for x=table.getn(obj),1,-1 do
-            caption = caption .. "|cff33ffcc" .. obj[x].text:GetText() .. "|r » "
+            caption = caption .. "|cffbb33ff" .. obj[x].text:GetText() .. "|r » "
           end
           caption = caption .. "|cffffffff" .. obj[0]
 
@@ -1276,7 +1276,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
       this.update:SetPoint("TOPLEFT", 200, -140)
       this.update:SetPoint("TOPRIGHT", 375, -140)
       this.update:SetJustifyH("CENTER")
-      this.update:SetTextColor(.2,1,.8)
+      this.update:SetTextColor(.7,.2,1)
 
       this.screenc = this:CreateFontString("Status", "LOW", "GameFontWhite")
       this.screenc:SetFont(pfUI.font_default, C.global.font_size)
@@ -1393,7 +1393,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
       -- load profile
       CreateConfig(nil, T["Load profile"], C.global, "profile", "button", function()
         if C.global.profile and pfUI_profiles[C.global.profile] then
-          CreateQuestionDialog(T["Load profile"] .. " '|cff33ffcc" .. C.global.profile .. "|r'?", function()
+          CreateQuestionDialog(T["Load profile"] .. " '|cffbb33ff" .. C.global.profile .. "|r'?", function()
             local selp = C.global.profile
             _G["pfUI_config"] = CopyTable(pfUI_profiles[C.global.profile])
             pfUI:LoadConfig()
@@ -1406,7 +1406,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
       -- delete profile
       CreateConfig(nil, T["Delete profile"], C.global, "profile", "button", function()
         if C.global.profile and pfUI_profiles[C.global.profile] then
-          CreateQuestionDialog(T["Delete profile"] .. " '|cff33ffcc" .. C.global.profile .. "|r'?", function()
+          CreateQuestionDialog(T["Delete profile"] .. " '|cffbb33ff" .. C.global.profile .. "|r'?", function()
             pfUI_profiles[C.global.profile] = nil
             this:GetParent():Hide()
           end)
@@ -1416,7 +1416,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
       -- save profile
       CreateConfig(nil, T["Save profile"], C.global, "profile", "button", function()
         if C.global.profile and pfUI_profiles[C.global.profile] then
-          CreateQuestionDialog(T["Save current settings to profile"] .. " '|cff33ffcc" .. C.global.profile .. "|r'?", function()
+          CreateQuestionDialog(T["Save current settings to profile"] .. " '|cffbb33ff" .. C.global.profile .. "|r'?", function()
             if pfUI_profiles[C.global.profile] then
               pfUI_profiles[C.global.profile] = CopyTable(C)
             end

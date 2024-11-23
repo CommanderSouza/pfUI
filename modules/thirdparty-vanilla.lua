@@ -78,7 +78,7 @@ pfUI:RegisterModule("thirdparty-vanilla", "vanilla", function()
           -- skin rows (raid)
           for i in pairs(KLHTM_Gui.raid.rows) do
             KLHTM_Gui.raid.rows[i].bar:SetTexture(pfUI.media["img:bar"])
-            KLHTM_Gui.raid.rows[i].bar:SetAlpha(.75)
+            KLHTM_Gui.raid.rows[i].bar:SetAlpha(.85)
 
             if _G["KLHTM_RaidFrameRow" .. i .. "NameText"] then
               _G["KLHTM_RaidFrameRow" .. i .. "NameText"]:SetFont(pfUI.font_default, 13, "OUTLINE")
@@ -91,7 +91,7 @@ pfUI:RegisterModule("thirdparty-vanilla", "vanilla", function()
           -- skin rows (self)
           for i in pairs(KLHTM_Gui.self.rows) do
             KLHTM_Gui.self.rows[i].bar:SetTexture(pfUI.media["img:bar"])
-            KLHTM_Gui.self.rows[i].bar:SetAlpha(.75)
+            KLHTM_Gui.self.rows[i].bar:SetAlpha(.85)
           end
         end
       end
@@ -196,14 +196,14 @@ pfUI:RegisterModule("thirdparty-vanilla", "vanilla", function()
 
     if C.thirdparty.twt.skin == "1" then
       CreateBackdrop(TWTMain, nil, nil, (C.thirdparty.chatbg == "1" and .8))
-      CreateBackdropShadow(TWTMain)
+      -- CreateBackdropShadow(TWTMain)
 
       if C.thirdparty.chatbg == "1" and C.chat.global.custombg == "1" then
         local r, g, b, a = strsplit(",", C.chat.global.background)
-        TWTMain.backdrop:SetBackdropColor(tonumber(r), tonumber(g), tonumber(b), tonumber(a))
+        TWTMain.backdrop:SetBackdropColor(tonumber(r), tonumber(g), tonumber(b), 0)
 
         local r, g, b, a = strsplit(",", C.chat.global.border)
-        TWTMain.backdrop:SetBackdropBorderColor(tonumber(r), tonumber(g), tonumber(b), tonumber(a))
+        TWTMain.backdrop:SetBackdropBorderColor(tonumber(r), tonumber(g), tonumber(b), 0)
       end
 
       TWTMainTitleBG:Hide()
@@ -458,7 +458,7 @@ pfUI:RegisterModule("thirdparty-vanilla", "vanilla", function()
       CreateBackdrop(SW_BarReportFrame_VarText_EditBox)
 
       -- copy
-      CreateBackdrop(SW_TextWindow, nil, nil, .75)
+      CreateBackdrop(SW_TextWindow, nil, nil, .85)
       CreateBackdrop(SW_TextWindow_Title, 0)
       SkinSlider(SW_TextWindowExportSlider)
       StripTextures(SW_TextWindow_EditBox, "BACKGROUND")
@@ -489,7 +489,7 @@ pfUI:RegisterModule("thirdparty-vanilla", "vanilla", function()
       SkinScrollbar(SW_TL_SelectorScrollBar)
 
       -- console
-      CreateBackdrop(SW_FrameConsole, nil, nil, .75)
+      CreateBackdrop(SW_FrameConsole, nil, nil, .85)
       CreateBackdrop(SW_FrameConsole_Title, 0)
       SW_FrameConsole_Title:SetHeight(24)
       SkinArrowButton(SW_FrameConsole_Text1_MsgUp, "up", 13)
@@ -540,7 +540,7 @@ pfUI:RegisterModule("thirdparty-vanilla", "vanilla", function()
 
     -- convo menu
     CreateBackdrop(WIM_Icon_ToolTip, 0, nil, tonumber(C.tooltip.alpha))
-    CreateBackdrop(WIM_ConversationMenu, 0, nil, .75)
+    CreateBackdrop(WIM_ConversationMenu, 0, nil, .85)
     for i=1, _G.WIM_MaxMenuCount do
       local btn, btnClose = _G["WIM_ConversationMenuTellButton"..i], _G["WIM_ConversationMenuTellButton"..i.."Close"]
       SkinCloseButton(btnClose, btn, -4, -1)
@@ -1081,7 +1081,7 @@ pfUI:RegisterModule("thirdparty-vanilla", "vanilla", function()
 
     -- Main window
     pfUI.api.StripTextures(NoteInputFrame, true)
-    CreateBackdrop(NoteInputFrame, nil, nil, .75)
+    CreateBackdrop(NoteInputFrame, nil, nil, .85)
     CreateBackdropShadow(NoteInputFrame)
 
     NoteInputFrame.backdrop:SetPoint("TOPLEFT", 10, -12)
@@ -1238,5 +1238,5 @@ pfUI:RegisterModule("thirdparty-vanilla", "vanilla", function()
     SkinCheckbox(xpsp3_checkButton_notify_playSystemDefaultSound)
     SkinButton(xpsp3_button_close)
   end)
-    
+
 end)

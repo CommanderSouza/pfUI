@@ -3,7 +3,7 @@ pfUI:RegisterSkin("Battlefield Score", "vanilla", function ()
   local bpad = rawborder > 1 and border - GetPerfectPixel() or GetPerfectPixel()
 
   StripTextures(WorldStateScoreFrame)
-  CreateBackdrop(WorldStateScoreFrame, nil, nil, .75)
+  CreateBackdrop(WorldStateScoreFrame, nil, nil, .85)
   CreateBackdropShadow(WorldStateScoreFrame)
 
   WorldStateScoreFrame.backdrop:SetPoint("TOPLEFT", 10, -14)

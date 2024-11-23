@@ -103,13 +103,13 @@ pfUI:RegisterModule("buffwatch", "vanilla:tbc", function ()
           if val == skill then return end
         end
         config.whitelist = config.whitelist .. "#" .. skill
-        DEFAULT_CHAT_FRAME:AddMessage("|cff33ffcc" .. skill .. "|r" .. T["is now whitelisted."])
+        DEFAULT_CHAT_FRAME:AddMessage("|cffbb33ff" .. skill .. "|r" .. T["is now whitelisted."])
       elseif IsShiftKeyDown() then
         for _, val in pairs({strsplit("#", config.blacklist)}) do
           if val == skill then return end
         end
         config.blacklist = config.blacklist .. "#" .. skill
-        DEFAULT_CHAT_FRAME:AddMessage("|cff33ffcc" .. skill .. "|r" .. T["is now blacklisted."])
+        DEFAULT_CHAT_FRAME:AddMessage("|cffbb33ff" .. skill .. "|r" .. T["is now blacklisted."])
       end
     elseif this.parent.unit == "player" then
       CancelPlayerBuff(GetPlayerBuff(PLAYER_BUFF_START_ID+this.id,this.type))
@@ -129,8 +129,8 @@ pfUI:RegisterModule("buffwatch", "vanilla:tbc", function ()
 
     if IsShiftKeyDown() then
       GameTooltip:AddLine(" ")
-      GameTooltip:AddDoubleLine(T["Ctrl-Click"], T["Add to Whitelist"], 1,1,1, .2,1,.8)
-      GameTooltip:AddDoubleLine(T["Shift-Click"], T["Add to Blacklist"], 1,1,1, .2,1,.8)
+      GameTooltip:AddDoubleLine(T["Ctrl-Click"], T["Add to Whitelist"], 1,1,1, .7,.2,1)
+      GameTooltip:AddDoubleLine(T["Shift-Click"], T["Add to Blacklist"], 1,1,1, .7,.2,1)
     end
 
     GameTooltip:Show()

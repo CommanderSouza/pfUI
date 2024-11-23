@@ -8,7 +8,7 @@ pfUI:RegisterSkin("Popup Dialogs", "vanilla:tbc", function ()
 
 
     local dialog = _G["StaticPopup"..i]
-    CreateBackdrop(dialog, nil, true, .75)
+    CreateBackdrop(dialog, nil, true, .85)
     CreateBackdropShadow(dialog)
 
     SkinCloseButton(_G[dialog:GetName().."CloseButton"], dialog, -6, -6)

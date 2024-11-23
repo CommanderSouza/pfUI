@@ -30,7 +30,7 @@ pfUI:RegisterSkin("Character", "vanilla:tbc", function ()
     {0.21875, 0.78125, 0.4765625, 0.546875}
   }
 
-  CreateBackdrop(CharacterFrame, nil, nil, .75)
+  CreateBackdrop(CharacterFrame, nil, nil, .85)
   CreateBackdropShadow(CharacterFrame)
 
   CharacterFrame.backdrop:SetPoint("TOPLEFT", 10, -10)
@@ -252,7 +252,7 @@ pfUI:RegisterSkin("Character", "vanilla:tbc", function ()
     SkinScrollbar(ReputationListScrollFrameScrollBar)
 
     StripTextures(ReputationDetailFrame)
-    CreateBackdrop(ReputationDetailFrame, nil, nil, .75)
+    CreateBackdrop(ReputationDetailFrame, nil, nil, .85)
     SkinCloseButton(ReputationDetailCloseButton, ReputationDetailFrame.backdrop, -6, -6)
 
     ReputationDetailFrame:ClearAllPoints()

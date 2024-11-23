@@ -18,7 +18,7 @@ pfUI:RegisterSkin("Auctionhouse", "vanilla:tbc", function ()
     end, 1)
 
     StripTextures(AuctionFrame, true)
-    CreateBackdrop(AuctionFrame, nil, nil, .75)
+    CreateBackdrop(AuctionFrame, nil, nil, .85)
     CreateBackdropShadow(AuctionFrame)
     EnableMovable(AuctionFrame)
 
@@ -215,7 +215,7 @@ pfUI:RegisterSkin("Auctionhouse", "vanilla:tbc", function ()
 
     do -- AuctionDressUpFrame
       StripTextures(AuctionDressUpFrame, nil, "BACKGROUND")
-      CreateBackdrop(AuctionDressUpFrame, nil, true, .75)
+      CreateBackdrop(AuctionDressUpFrame, nil, true, .85)
       CreateBackdropShadow(AuctionDressUpFrame)
 
       AuctionDressUpFrame:ClearAllPoints()

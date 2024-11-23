@@ -1,6 +1,6 @@
 pfUI:RegisterSkin("Arena", "tbc", function ()
   StripTextures(ArenaFrame)
-  CreateBackdrop(ArenaFrame, nil, nil, .75)
+  CreateBackdrop(ArenaFrame, nil, nil, .85)
   CreateBackdropShadow(ArenaFrame)
 
   ArenaFrame.backdrop:SetPoint("TOPLEFT", 10, -10)
@@ -16,7 +16,7 @@ pfUI:RegisterSkin("Arena", "tbc", function ()
   ArenaFrameFrameLabel:SetPoint("TOP", TabardFrame.backdrop, "TOP", 0, -10)
 
   ArenaFrame.zones_bg = CreateFrame("Frame", "ArenaFrameZonesBackground", ArenaFrame)
-  CreateBackdrop(ArenaFrame.zones_bg, nil, nil, .7)
+  CreateBackdrop(ArenaFrame.zones_bg, nil, nil, .85)
   ArenaFrame.zones_bg:SetWidth(324)
   ArenaFrame.zones_bg:SetHeight(204)
   ArenaFrame.zones_bg:SetPoint("TOPLEFT", ArenaFrame.backdrop, "TOPLEFT", 9, -62)

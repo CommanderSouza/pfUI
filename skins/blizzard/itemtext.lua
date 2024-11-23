@@ -1,6 +1,6 @@
 pfUI:RegisterSkin("Books", "vanilla:tbc", function ()
   StripTextures(ItemTextFrame)
-  CreateBackdrop(ItemTextFrame, nil, nil, .75)
+  CreateBackdrop(ItemTextFrame, nil, nil, .85)
   CreateBackdropShadow(ItemTextFrame)
 
   ItemTextFrame.backdrop:SetPoint("TOPLEFT", 12, -12)
@@ -19,7 +19,7 @@ pfUI:RegisterSkin("Books", "vanilla:tbc", function ()
   ItemTextTitleText:SetPoint("TOP", ItemTextFrame.backdrop, "TOP", 0, -10)
 
   StripTextures(ItemTextScrollFrame)
-  CreateBackdrop(ItemTextScrollFrame, nil, true, .75)
+  CreateBackdrop(ItemTextScrollFrame, nil, true, .85)
   SkinScrollbar(ItemTextScrollFrameScrollBar)
   ItemTextScrollFrame:ClearAllPoints()
   ItemTextScrollFrame:SetPoint("TOPRIGHT", -66, -46)
