@@ -354,17 +354,17 @@ pfUI:RegisterModule("thirdparty", "vanilla:tbc", function()
         for w in pairs(DPSMateSettings["windows"]) do
           DPSMateSettings["windows"][w]["titlebarheight"] = 20
           DPSMateSettings["windows"][w]["titlebarfontsize"] = 12
-          DPSMateSettings["windows"][w]["titlebarfont"] = "Accidental Presidency"
+          DPSMateSettings["windows"][w]["titlebarfont"] = "FRIZQT"
           DPSMateSettings["windows"][w]["titlebaropacity"] = 0
 
           DPSMateSettings["windows"][w]["titlebarfontcolor"][1] = 1
           DPSMateSettings["windows"][w]["titlebarfontcolor"][2] = 1
           DPSMateSettings["windows"][w]["titlebarfontcolor"][3] = 1
 
-          DPSMateSettings["windows"][w]["barheight"] = 11
-          DPSMateSettings["windows"][w]["barfontsize"] = 13
+          DPSMateSettings["windows"][w]["barheight"] = 17
+          DPSMateSettings["windows"][w]["barfontsize"] = 11
           DPSMateSettings["windows"][w]["bartexture"] = "normTex"
-          DPSMateSettings["windows"][w]["barfont"] = "Accidental Presidency"
+          DPSMateSettings["windows"][w]["barfont"] = "FRIZQT"
 
           DPSMateSettings["windows"][w]["opacity"] = 1
           DPSMateSettings["windows"][w]["contentbgtexture"] = "Solid Background"
