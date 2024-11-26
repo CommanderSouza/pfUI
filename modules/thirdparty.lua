@@ -380,7 +380,7 @@ pfUI:RegisterModule("thirdparty", "vanilla:tbc", function()
         for k, val in pairs(DPSMateSettings["windows"]) do
           local frame = _G["DPSMate_"..val["name"]]
           CreateBackdrop(frame, nil, nil, (C.thirdparty.chatbg == "1" and .8))
-          CreateBackdropShadow(frame)
+          -- CreateBackdropShadow(frame)
 
           if C.thirdparty.chatbg == "1" and C.chat.global.custombg == "1" then
             local r, g, b, a = strsplit(",", C.chat.global.background)
