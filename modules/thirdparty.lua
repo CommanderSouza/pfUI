@@ -301,7 +301,7 @@ pfUI:RegisterModule("thirdparty", "vanilla:tbc", function()
           if button then
             button:SetHeight(14)
             CreateBackdrop(button, nil, true, .75)
-            button:SetBackdropBorderColor(.4,.4,.4,1)
+            button:SetBackdropBorderColor(0,0,0,1)
           end
         end
 
