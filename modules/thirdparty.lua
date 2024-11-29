@@ -281,29 +281,29 @@ pfUI:RegisterModule("thirdparty", "vanilla:tbc", function()
 
         if C.thirdparty.chatbg == "1" and C.chat.global.custombg == "1" then
           local r, g, b, a = strsplit(",", C.chat.global.background)
-          window.backdrop:SetBackdropColor(tonumber(r), tonumber(g), tonumber(b), 0)
+          window.backdrop:SetBackdropColor(tonumber(r), tonumber(g), tonumber(b), tonumber(a))
 
           local r, g, b, a = strsplit(",", C.chat.global.border)
-          window.backdrop:SetBackdropBorderColor(tonumber(r), tonumber(g), tonumber(b), 0)
+          window.backdrop:SetBackdropBorderColor(tonumber(r), tonumber(g), tonumber(b), tonumber(a))
         end
 
         -- skin buttons
-        -- window.btnAnnounce:SetWidth(14)
-        -- window.btnReset:SetWidth(14)
+        window.btnAnnounce:SetWidth(14)
+        window.btnReset:SetWidth(14)
 
-        -- local buttons = {
-        --   window.btnAnnounce, window.btnReset, window.btnSegment, window.btnMode,
-        --   window.btnDamage, window.btnDPS, window.btnHeal, window.btnHPS,
-        --   window.btnCurrent, window.btnOverall,
-        -- }
+        local buttons = {
+          window.btnAnnounce, window.btnReset, window.btnSegment, window.btnMode,
+          window.btnDamage, window.btnDPS, window.btnHeal, window.btnHPS,
+          window.btnCurrent, window.btnOverall,
+        }
 
-        -- for _, button in pairs(buttons) do
-        --   if button then
-        --     button:SetHeight(14)
-        --     CreateBackdrop(button, nil, true, 0)
-        --     button:SetBackdropBorderColor(.4,.4,.4,0)
-        --   end
-        -- end
+        for _, button in pairs(buttons) do
+          if button then
+            button:SetHeight(14)
+            CreateBackdrop(button, nil, true, .75)
+            button:SetBackdropBorderColor(.4,.4,.4,1)
+          end
+        end
 
         window.border:Hide()
       end
