@@ -1226,7 +1226,7 @@ function pfUI.api.CreateInfoBox(text, time, parent, height)
 
     infobox.timeout = CreateFrame("StatusBar", nil, infobox)
     infobox.timeout:SetStatusBarTexture(pfUI.media["img:bar"])
-    infobox.timeout:SetStatusBarColor(.3,1,.8,1)
+    infobox.timeout:SetStatusBarColor(1,.25,.25,1)
 
     infobox:ClearAllPoints()
     infobox.text:SetAllPoints(infobox)
