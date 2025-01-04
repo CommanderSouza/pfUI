@@ -540,6 +540,62 @@ pfUI:RegisterModule("panel", "vanilla:tbc", function()
       end)
     end
 
+    do -- Demonic Figurines
+      local widget = CreateFrame("Frame", "pfPanelWidgetDemonicFigurine", UIParent)
+      widget:RegisterEvent("PLAYER_ENTERING_WORLD")
+      widget:RegisterEvent("BAG_UPDATE")
+      widget:SetScript("OnEvent", function()
+        local count = 0
+        local _, class = UnitClass("player")
+    
+        if class == "WARLOCK" then
+          for bag=0,4 do
+            for slot=1,GetContainerNumSlots(bag) do
+              local link = GetContainerItemLink(bag, slot)
+              if link then
+                local _, _, id = string.find(link, "item:(%d+):%d+:%d+:%d+")
+                if id == "16583" then
+                  -- Get the stack count of the item in this slot
+                  local _, itemCount = GetContainerItemInfo(bag, slot)
+                  count = count + (itemCount or 0)
+                end
+              end
+            end
+          end
+        end
+    
+        pfUI.panel:OutputPanel("demonicfigurine", T["Demonic Figurines"] .. ": " .. count)
+      end)
+    end 
+    
+    do -- Infernal Stones
+      local widget = CreateFrame("Frame", "pfPanelWidgetInfernalStone", UIParent)
+      widget:RegisterEvent("PLAYER_ENTERING_WORLD")
+      widget:RegisterEvent("BAG_UPDATE")
+      widget:SetScript("OnEvent", function()
+        local count = 0
+        local _, class = UnitClass("player")
+    
+        if class == "WARLOCK" then
+          for bag=0,4 do
+            for slot=1,GetContainerNumSlots(bag) do
+              local link = GetContainerItemLink(bag, slot)
+              if link then
+                local _, _, id = string.find(link, "item:(%d+):%d+:%d+:%d+")
+                if id == "5565" then
+                  -- Get the stack count of the item in this slot
+                  local _, itemCount = GetContainerItemInfo(bag, slot)
+                  count = count + (itemCount or 0)
+                end
+              end
+            end
+          end
+        end
+    
+        pfUI.panel:OutputPanel("infernalstone", T["Infernal Stones"] .. ": " .. count)
+      end)
+    end    
+
     do -- Soulshards
       local widget = CreateFrame("Frame", "pfPanelWidgetSoulshard", UIParent)
       widget:RegisterEvent("PLAYER_ENTERING_WORLD")
@@ -547,21 +603,23 @@ pfUI:RegisterModule("panel", "vanilla:tbc", function()
       widget:SetScript("OnEvent", function()
         local count = 0
         local _, class = UnitClass("player")
-
+    
         if class == "WARLOCK" then
           for bag=0,4 do
             for slot=1,GetContainerNumSlots(bag) do
-              local link = GetContainerItemLink(bag,slot)
+              local link = GetContainerItemLink(bag, slot)
               if link then
                 local _, _, id = string.find(link, "item:(%d+):%d+:%d+:%d+")
                 if id == "6265" then
-                  count = count + 1
+                  -- Get the stack count of the item in this slot
+                  local _, itemCount = GetContainerItemInfo(bag, slot)
+                  count = count + (itemCount or 0)
                 end
               end
             end
           end
         end
-
+    
         pfUI.panel:OutputPanel("soulshard", T["Soulshards"] .. ": " .. count)
       end)
     end
