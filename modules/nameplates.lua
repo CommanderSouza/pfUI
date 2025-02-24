@@ -753,6 +753,15 @@ pfUI:RegisterModule("nameplates", "vanilla:tbc", function ()
       end
     end
 
+    if superwow_active and C.nameplates.barcombatstate == "1" then
+      local guid = plate.parent:GetName(1) or ""
+      local color = GetCombatStateColor(guid)
+
+      if color then
+        r, g, b, a = color.r, color.g, color.b, color.a
+      end
+    end
+
     if r ~= plate.cache.r or g ~= plate.cache.g or b ~= plate.cache.b then
       plate.health:SetStatusBarColor(r, g, b, a)
       plate.cache.r, plate.cache.g, plate.cache.b = r, g, b
