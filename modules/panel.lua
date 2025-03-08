@@ -562,6 +562,32 @@ pfUI:RegisterModule("panel", "vanilla:tbc", function()
       end)
     end
 
+    do -- Demonic Figurines
+      local widget = CreateFrame("Frame", "pfPanelWidgetDemonicFigurine", UIParent)
+      widget:RegisterEvent("PLAYER_ENTERING_WORLD")
+      widget:RegisterEvent("BAG_UPDATE")
+      widget:SetScript("OnEvent", function()
+        local _, class = UnitClass("player")
+        if class == "WARLOCK" then
+          local count = pfUI.api.GetItemCount(T["Demonic Figurine"])
+          pfUI.panel:OutputPanel("demonicfigurine", T["DemonicFigurines"] .. ": " .. count)
+        end
+      end)
+    end
+
+    do -- Infernal Stones
+      local widget = CreateFrame("Frame", "pfPanelWidgetInfernalStone", UIParent)
+      widget:RegisterEvent("PLAYER_ENTERING_WORLD")
+      widget:RegisterEvent("BAG_UPDATE")
+      widget:SetScript("OnEvent", function()
+        local _, class = UnitClass("player")
+        if class == "WARLOCK" then
+          local count = pfUI.api.GetItemCount(T["Infernal Stone"])
+          pfUI.panel:OutputPanel("infernalstone", T["InfernalStones"] .. ": " .. count)
+        end
+      end)
+    end
+
     do -- Hearthstone bind location
       local widget = CreateFrame("Frame", "pfPanelBindLocation", UIParent)
       widget:RegisterEvent("PLAYER_ENTERING_WORLD")
