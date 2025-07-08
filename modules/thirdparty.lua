@@ -282,7 +282,7 @@ pfUI:RegisterModule("thirdparty", "vanilla:tbc", function()
             window.title:SetPoint("TOPRIGHT", -1, -1)
 
             CreateBackdrop(window, chat_border, nil, (C.thirdparty.chatbg == "1" and .8))
-            CreateBackdropShadow(window)
+            -- CreateBackdropShadow(window)
 
             local hook = window.Refresh
             if not window.pfRefreshHook then
