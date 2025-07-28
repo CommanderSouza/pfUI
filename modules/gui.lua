@@ -1415,9 +1415,18 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
         if C.global.profile and pfUI_profiles[C.global.profile] then
           CreateQuestionDialog(T["Load profile"] .. " '|cff33ffcc" .. C.global.profile .. "|r'?", function()
             local selp = C.global.profile
+            local rchat = C.chat.right.enable
+
+            -- load profile
             _G["pfUI_config"] = CopyTable(pfUI_profiles[C.global.profile])
+
+            -- restore values
+            pfUI:UpdateConfig("global", nil, "profile", selp)
+            pfUI:UpdateConfig("chat", "right", "enable", rchat)
+
+            -- add default values
             pfUI:LoadConfig()
-            C.global.profile = selp
+
             ReloadUI()
           end)
         end
@@ -1992,6 +2001,7 @@ pfUI:RegisterModule("gui", "vanilla:tbc", function ()
       CreateConfig(nil, T["Color Debuff Stacks"], C.buffbar.tdebuff, "colorstacks", "checkbox")
       CreateConfig(nil, T["Buffbar Width"], C.buffbar.tdebuff, "width")
       CreateConfig(nil, T["Buffbar Height"], C.buffbar.tdebuff, "height")
+      CreateConfig(nil, T["Only Show Own Debuffs (|cffffaaaaExperimental|r)"], C.buffbar.tdebuff, "selfdebuff", "checkbox")
       CreateConfig(nil, T["Filter Mode"], C.buffbar.tdebuff, "filter", "dropdown", pfUI.gui.dropdowns.buffbarfilter)
       CreateConfig(nil, T["Time Threshold"], C.buffbar.tdebuff, "threshold")
       CreateConfig(nil, T["Whitelist"], C.buffbar.tdebuff, "whitelist", "list")
