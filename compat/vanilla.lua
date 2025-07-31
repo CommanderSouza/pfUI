@@ -34,26 +34,30 @@ ACTIONBAR_SECURE_TEMPLATE_BUTTON = nil
 UNITFRAME_SECURE_TEMPLATE = nil
 
 --[[ Vanilla API Extensions ]]--
-function hooksecurefunc(name, func, append)
-  if not _G[name] then return end
+function hooksecurefunc(tbl, name, func, prepend)
+  if type(tbl) == "string" then
+    prepend, func, name, tbl = func, name, tbl, _G
+  end
+
+  if not tbl or not tbl[name] then return end
 
   pfUI.hooks[tostring(func)] = {}
-  pfUI.hooks[tostring(func)]["old"] = _G[name]
+  pfUI.hooks[tostring(func)]["old"] = tbl[name]
   pfUI.hooks[tostring(func)]["new"] = func
 
-  if append then
+  if prepend then
     pfUI.hooks[tostring(func)]["function"] = function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10)
-      pfUI.hooks[tostring(func)]["old"](a1, a2, a3, a4, a5, a6, a7, a8, a9, a10)
       pfUI.hooks[tostring(func)]["new"](a1, a2, a3, a4, a5, a6, a7, a8, a9, a10)
+      pfUI.hooks[tostring(func)]["old"](a1, a2, a3, a4, a5, a6, a7, a8, a9, a10)
     end
   else
     pfUI.hooks[tostring(func)]["function"] = function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10)
-      pfUI.hooks[tostring(func)]["new"](a1, a2, a3, a4, a5, a6, a7, a8, a9, a10)
       pfUI.hooks[tostring(func)]["old"](a1, a2, a3, a4, a5, a6, a7, a8, a9, a10)
+      pfUI.hooks[tostring(func)]["new"](a1, a2, a3, a4, a5, a6, a7, a8, a9, a10)
     end
   end
 
-  _G[name] = pfUI.hooks[tostring(func)]["function"]
+  tbl[name] = pfUI.hooks[tostring(func)]["function"]
 end
 
 do -- GetItemInfo
