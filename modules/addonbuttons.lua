@@ -49,6 +49,17 @@ pfUI:RegisterModule("addonbuttons", "vanilla:tbc", function ()
     end
   end)
 
+  local pfUIAddonButtonHide = CreateFrame("Frame", nil, UIParent)
+  pfUIAddonButtonHide:RegisterEvent('PLAYER_ENTERING_WORLD')
+  pfUIAddonButtonHide:SetScript("OnEvent", function()
+    local enabled = C.appearance.minimap.addon_buttons == "1"
+    if enabled then
+      if pfUI.addonbuttons:IsShown() then
+        pfUI.addonbuttons:Hide()
+      end
+    end
+  end)
+
   pfUI.addonbuttons.buttons = {}
   pfUI.addonbuttons.overrides = {}
   pfUI.addonbuttons.last_updated = 0
