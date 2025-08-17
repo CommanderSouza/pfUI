@@ -421,7 +421,7 @@ pfUI:RegisterModule("addonbuttons", "vanilla:tbc", function ()
     -- check if the panel should be shown by default
     if not this.initialized then
       if C.abuttons.showdefault == "1" and GetNumButtons() > 0 then
-        pfUI.addonbuttons:Show()
+        pfUI.addonbuttons:Hide()
       else
         pfUI.addonbuttons:Hide()
       end
